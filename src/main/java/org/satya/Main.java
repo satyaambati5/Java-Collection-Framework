@@ -1,8 +1,11 @@
 package org.satya;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
@@ -51,7 +54,10 @@ public class Main {
 
         //DQueue Example
 //        queue.DqueueExample();
+//Stream Object
 
+        StreamExample mystream= new StreamExample();
+        mystream.streamExample();
 
     }
 
