@@ -1,6 +1,7 @@
 package org.satya;
 
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 public class StreamExample {
@@ -22,6 +23,13 @@ public class StreamExample {
 
         Stream<Integer> teststream= Arrays.stream(arr).filter(val-> val>3).map(val ->2*val);
         System.out.println("This is data after filter : "+ teststream.toList());
+
+        Stream <Integer> minandmax = Arrays.stream(arr).distinct().sorted((Integer val1, Integer val2) -> val2-val1).skip(0);
+//        Optional<Integer> minval= minandmax.min((Integer val1, Integer val2) -> val1-val2);
+//        System.out.println("Second minimum value is : "+ minval);
+        Optional<Integer> maxval= minandmax.min((Integer val1, Integer val2) -> val2-val1);
+        System.out.println("Second maximum value is : "+maxval);
+
 
     }
 }
