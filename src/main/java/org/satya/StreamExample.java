@@ -19,6 +19,10 @@ public class StreamExample {
         Stream<Integer> distinctarr= Arrays.stream(arr).distinct();
         System.out.println(distinctarr.toList());
 
+
+        Stream<Integer> teststream= Arrays.stream(arr).filter(val-> val>3).map(val ->2*val);
+        System.out.println("This is data after filter : "+ teststream.toList());
+
     }
 }
 
