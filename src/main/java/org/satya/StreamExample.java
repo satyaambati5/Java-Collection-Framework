@@ -18,6 +18,7 @@ public class StreamExample {
 
         Stream<Integer> distinctarr= Arrays.stream(arr).distinct();
         System.out.println(distinctarr.toList());
+
     }
 }
 
